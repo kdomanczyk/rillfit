@@ -1,5 +1,4 @@
-@extends('layouts.layout')
-@section('content')
+<?php $__env->startSection('content'); ?>
     <div class="container-fluid first-nav-fluid">
         <div class="container first-nav">
 
@@ -10,7 +9,7 @@
             <div class="nav-bar-menu">
             
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand " href="#"><img src="{{asset('images/Rillfit-website.png')}}"></a>
+                <a class="navbar-brand " href="#"><img src="<?php echo e(asset('images/Rillfit-website.png')); ?>"></a>
                     
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"><i>&#x21CC;</i></span>
@@ -127,4 +126,5 @@
             </div>
         </div>
     </div>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.layout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
